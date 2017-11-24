@@ -1,0 +1,1097 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="49e-Tb-3d3">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13174"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="GillSans.ttc">
+            <string>GillSans</string>
+        </array>
+        <array key="Optima.ttc">
+            <string>Optima-Regular</string>
+        </array>
+    </customFonts>
+    <scenes>
+        <!--Jack Wolfskin View Controller-->
+        <scene sceneID="c7Y-2l-FG9">
+            <objects>
+                <viewController id="RPi-VM-CdO" customClass="JackWolfskinViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKC-EE-0yD">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="dBk-Bp-fPG">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W0y-sY-ZHg">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Jack Wolfskin Gear" id="njE-kj-nGo">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="F9n-xv-XmM">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="UTf-1m-mYN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="mg2-u7-M49">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="3ho-iS-FMj"/>
+                                    <constraint firstAttribute="width" secondItem="mg2-u7-M49" secondAttribute="height" multiplier="125:201" id="gAa-Y2-XFF"/>
+                                    <constraint firstAttribute="height" constant="603" id="hiK-Cd-JfX"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="mg2-u7-M49" firstAttribute="leading" secondItem="hJj-5n-ahn" secondAttribute="leading" id="4Oq-F9-1UA"/>
+                            <constraint firstItem="dBk-Bp-fPG" firstAttribute="centerY" secondItem="lKC-EE-0yD" secondAttribute="centerY" id="5sa-xE-TOd"/>
+                            <constraint firstItem="dBk-Bp-fPG" firstAttribute="leading" secondItem="lKC-EE-0yD" secondAttribute="leadingMargin" constant="-25" id="6zR-ed-iNN"/>
+                            <constraint firstItem="mg2-u7-M49" firstAttribute="trailing" secondItem="hJj-5n-ahn" secondAttribute="trailing" id="U4z-QV-d7p"/>
+                            <constraint firstItem="mg2-u7-M49" firstAttribute="top" secondItem="W0y-sY-ZHg" secondAttribute="bottom" id="WSM-ef-pVK"/>
+                            <constraint firstItem="mg2-u7-M49" firstAttribute="bottom" secondItem="hJj-5n-ahn" secondAttribute="bottom" id="Yzn-b7-BgB"/>
+                            <constraint firstItem="W0y-sY-ZHg" firstAttribute="trailing" secondItem="mg2-u7-M49" secondAttribute="trailing" id="Z7P-HV-6lq"/>
+                            <constraint firstItem="W0y-sY-ZHg" firstAttribute="top" secondItem="hJj-5n-ahn" secondAttribute="top" id="cgC-fV-EbZ"/>
+                            <constraint firstItem="W0y-sY-ZHg" firstAttribute="leading" secondItem="mg2-u7-M49" secondAttribute="leading" id="iEo-Gz-P0j"/>
+                            <constraint firstItem="dBk-Bp-fPG" firstAttribute="top" secondItem="lKC-EE-0yD" secondAttribute="topMargin" constant="-32" id="rPw-hm-xe6"/>
+                            <constraint firstItem="W0y-sY-ZHg" firstAttribute="centerX" secondItem="dBk-Bp-fPG" secondAttribute="centerX" id="zRh-XA-zlT"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hJj-5n-ahn"/>
+                    </view>
+                    <connections>
+                        <outlet property="JackWebView" destination="mg2-u7-M49" id="Ce6-AL-Oe7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Lgz-Do-03u" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="750" y="-1002"/>
+        </scene>
+        <!--Karrimor View Controller-->
+        <scene sceneID="jye-aw-jt0">
+            <objects>
+                <viewController id="wGN-dP-jQZ" customClass="KarrimorViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="SS7-AS-jE5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="yYM-TA-OZQ">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="AIb-Hg-gov">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Karrimor Gear" id="3le-9g-jDz">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="NE2-0x-eCm">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="nU4-h1-hHh"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gQc-UY-DEo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="b1T-bc-wH4"/>
+                                    <constraint firstAttribute="width" secondItem="gQc-UY-DEo" secondAttribute="height" multiplier="125:201" id="nKR-rZ-V2a"/>
+                                    <constraint firstAttribute="height" constant="603" id="t8x-z6-Ig8"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="gQc-UY-DEo" firstAttribute="top" secondItem="AIb-Hg-gov" secondAttribute="bottom" id="5Bj-mB-cpb"/>
+                            <constraint firstItem="yYM-TA-OZQ" firstAttribute="top" secondItem="SS7-AS-jE5" secondAttribute="topMargin" constant="-32" id="AZn-f1-3WU"/>
+                            <constraint firstItem="AIb-Hg-gov" firstAttribute="trailing" secondItem="gQc-UY-DEo" secondAttribute="trailing" id="HK4-kA-dAV"/>
+                            <constraint firstItem="gQc-UY-DEo" firstAttribute="bottom" secondItem="5MT-pJ-jgv" secondAttribute="bottom" id="PgG-md-WHn"/>
+                            <constraint firstItem="AIb-Hg-gov" firstAttribute="centerX" secondItem="yYM-TA-OZQ" secondAttribute="centerX" id="QMa-KE-SFZ"/>
+                            <constraint firstItem="gQc-UY-DEo" firstAttribute="trailing" secondItem="5MT-pJ-jgv" secondAttribute="trailing" id="RFR-OE-jha"/>
+                            <constraint firstItem="AIb-Hg-gov" firstAttribute="top" secondItem="5MT-pJ-jgv" secondAttribute="top" id="Vo7-EA-pn7"/>
+                            <constraint firstItem="yYM-TA-OZQ" firstAttribute="leading" secondItem="SS7-AS-jE5" secondAttribute="leadingMargin" constant="-25" id="hYg-YG-yuZ"/>
+                            <constraint firstItem="gQc-UY-DEo" firstAttribute="leading" secondItem="5MT-pJ-jgv" secondAttribute="leading" id="rMb-QS-LgB"/>
+                            <constraint firstItem="AIb-Hg-gov" firstAttribute="leading" secondItem="gQc-UY-DEo" secondAttribute="leading" id="s1L-zx-pKx"/>
+                            <constraint firstItem="yYM-TA-OZQ" firstAttribute="centerY" secondItem="SS7-AS-jE5" secondAttribute="centerY" id="v5z-3p-ft6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="5MT-pJ-jgv"/>
+                    </view>
+                    <connections>
+                        <outlet property="karrimorWebView" destination="gQc-UY-DEo" id="qzA-au-tb7"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2Ns-bo-OOs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1452" y="-1003"/>
+        </scene>
+        <!--Lowe Alpine View Controller-->
+        <scene sceneID="Xof-5T-hd9">
+            <objects>
+                <viewController id="QHj-1g-bPA" customClass="LoweAlpineViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FHd-Br-mXM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="PFl-H7-fbc">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xMr-aC-Rnb">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Lowe Alpine Gear" id="bhV-yM-XA3">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="Xb4-1U-90p">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="HBW-ns-DD9"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="CgY-Rl-I1K">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="603" id="Oef-2w-RNL"/>
+                                    <constraint firstAttribute="width" secondItem="CgY-Rl-I1K" secondAttribute="height" multiplier="125:201" id="fHn-6Y-F5M"/>
+                                    <constraint firstAttribute="width" constant="375" id="mpb-fk-jQM"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="xMr-aC-Rnb" firstAttribute="leading" secondItem="CgY-Rl-I1K" secondAttribute="leading" id="0et-sV-217"/>
+                            <constraint firstItem="PFl-H7-fbc" firstAttribute="centerY" secondItem="FHd-Br-mXM" secondAttribute="centerY" id="B7v-n1-NIr"/>
+                            <constraint firstItem="CgY-Rl-I1K" firstAttribute="leading" secondItem="8a7-aX-j10" secondAttribute="leading" id="MmA-bF-n6c"/>
+                            <constraint firstItem="CgY-Rl-I1K" firstAttribute="trailing" secondItem="8a7-aX-j10" secondAttribute="trailing" id="N1N-6v-Sah"/>
+                            <constraint firstItem="PFl-H7-fbc" firstAttribute="top" secondItem="FHd-Br-mXM" secondAttribute="topMargin" constant="-32" id="ORQ-UK-h8B"/>
+                            <constraint firstItem="PFl-H7-fbc" firstAttribute="leading" secondItem="FHd-Br-mXM" secondAttribute="leadingMargin" constant="-25" id="RFR-UT-HBG"/>
+                            <constraint firstItem="CgY-Rl-I1K" firstAttribute="bottom" secondItem="8a7-aX-j10" secondAttribute="bottom" id="WSQ-yV-3Ru"/>
+                            <constraint firstItem="xMr-aC-Rnb" firstAttribute="centerX" secondItem="PFl-H7-fbc" secondAttribute="centerX" id="eIs-Uh-CMP"/>
+                            <constraint firstItem="CgY-Rl-I1K" firstAttribute="top" secondItem="xMr-aC-Rnb" secondAttribute="bottom" id="fa2-2s-v2h"/>
+                            <constraint firstItem="xMr-aC-Rnb" firstAttribute="trailing" secondItem="CgY-Rl-I1K" secondAttribute="trailing" id="sVR-ij-ekg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="8a7-aX-j10"/>
+                    </view>
+                    <connections>
+                        <outlet property="loweWebView" destination="CgY-Rl-I1K" id="0hr-HG-FEx"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="V3N-HS-hHg" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2169" y="-1003"/>
+        </scene>
+        <!--Outdoor Gear Menu-->
+        <scene sceneID="hNz-n2-bh7">
+            <objects>
+                <viewController id="9pv-A4-QxB" customClass="FirstViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="tsR-hK-woN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="wW7-0F-He8">
+                                <rect key="frame" x="-8" y="-17" width="392" height="691"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dQb-zF-YHW">
+                                <rect key="frame" x="155" y="301" width="64" height="64"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="backpack"/>
+                                <connections>
+                                    <segue destination="wuT-KQ-kqd" kind="modal" id="IWG-DH-zhs"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Your Outdoor Gear" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ig2-1B-p8B">
+                                <rect key="frame" x="110" y="251" width="154" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Tap The Backpack For Choose" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pI8-j7-P30">
+                                <rect key="frame" x="66" y="222" width="245" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Outdoor Gear Menu" id="N1A-uT-6M2"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="W5J-7L-Pyd" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088.8" y="-320.68965517241384"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="Y0X-SF-3Hb">
+            <objects>
+                <viewController id="wuT-KQ-kqd" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="JFd-8l-m4Z">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="NBD-ig-MSz">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7tw-6A-CaB">
+                                <rect key="frame" x="16" y="92" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="ARC'TERYX"/>
+                                <connections>
+                                    <segue destination="Dud-z2-rBL" kind="modal" id="kXu-en-TVd"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7D8-VA-uRz">
+                                <rect key="frame" x="145" y="92" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="AVTECH"/>
+                                <connections>
+                                    <segue destination="ymw-6h-E4V" kind="modal" id="3vh-mE-kKf"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bfC-ai-VQz">
+                                <rect key="frame" x="274" y="92" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Berghaus"/>
+                                <connections>
+                                    <segue destination="Tc0-gK-Sck" kind="modal" id="R86-wl-iK8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cQn-Kz-mGO">
+                                <rect key="frame" x="16" y="208" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Deuter"/>
+                                <connections>
+                                    <segue destination="2Dd-bi-hEL" kind="modal" id="7gb-5x-z9g"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Icl-2z-T4E">
+                                <rect key="frame" x="145" y="208" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Eiger"/>
+                                <connections>
+                                    <segue destination="LQO-hF-il6" kind="modal" id="7x2-xn-y7M"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yfE-yk-6tP">
+                                <rect key="frame" x="274" y="208" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Gregory"/>
+                                <connections>
+                                    <segue destination="BeG-G5-NMA" kind="modal" id="x0u-Yn-cxP"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="47f-lm-C8A">
+                                <rect key="frame" x="16" y="326" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="JackWolfskin"/>
+                                <connections>
+                                    <segue destination="RPi-VM-CdO" kind="modal" id="vU7-8e-Wt8"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="O2o-XM-DYq">
+                                <rect key="frame" x="145" y="326" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Karrimor"/>
+                                <connections>
+                                    <segue destination="wGN-dP-jQZ" kind="modal" id="Tgp-e3-Ynb"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NCP-n8-0kC">
+                                <rect key="frame" x="274" y="326" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="LoweAlpine"/>
+                                <connections>
+                                    <segue destination="QHj-1g-bPA" kind="modal" id="I7Q-PX-F2I"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e8A-L3-Rg5">
+                                <rect key="frame" x="16" y="442" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="Marmot"/>
+                                <connections>
+                                    <segue destination="50D-JX-pvq" kind="modal" id="Kua-v2-70W"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ArQ-0E-hrV">
+                                <rect key="frame" x="145" y="442" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="REI"/>
+                                <connections>
+                                    <segue destination="kLA-bY-Qim" kind="modal" id="NvN-cT-H92"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PJf-Dx-2sg">
+                                <rect key="frame" x="274" y="442" width="85" height="96"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" image="TheNorthFace"/>
+                                <connections>
+                                    <segue destination="DXU-jn-1SV" kind="modal" id="tal-2b-QFu"/>
+                                </connections>
+                            </button>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rLW-9E-abQ">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Choose Your Outdoor Gear Brand" id="x3k-SB-erH"/>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="OcU-PM-LbU"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aiW-VW-2SH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791.2" y="-321.58920539730138"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="mND-jR-dlE">
+            <objects>
+                <viewController id="Dud-z2-rBL" customClass="ARCTERYXViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="u2D-DS-2Nd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="Z2o-u2-bal">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zWO-by-Opc">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="Whw-a4-gsP"/>
+                                    <constraint firstAttribute="width" secondItem="zWO-by-Opc" secondAttribute="height" multiplier="125:201" id="m7T-dP-yu3"/>
+                                    <constraint firstAttribute="height" constant="603" id="vVB-nA-VHp"/>
+                                </constraints>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qzh-xl-tWN">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="ARC'TERYX Gear" id="Hhn-Fc-WCi">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="IYF-a1-LJ1">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="KAC-dg-wW7"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Z2o-u2-bal" firstAttribute="centerY" secondItem="u2D-DS-2Nd" secondAttribute="centerY" id="CVe-JS-phr"/>
+                            <constraint firstItem="qzh-xl-tWN" firstAttribute="trailing" secondItem="zWO-by-Opc" secondAttribute="trailing" id="DlD-OV-gSq"/>
+                            <constraint firstItem="zWO-by-Opc" firstAttribute="top" secondItem="qzh-xl-tWN" secondAttribute="bottom" id="L6a-oi-4fy"/>
+                            <constraint firstItem="Z2o-u2-bal" firstAttribute="top" secondItem="u2D-DS-2Nd" secondAttribute="topMargin" constant="-32" id="MeL-Yi-hJd"/>
+                            <constraint firstItem="Z2o-u2-bal" firstAttribute="leading" secondItem="u2D-DS-2Nd" secondAttribute="leadingMargin" constant="-25" id="NK2-Ff-oYh"/>
+                            <constraint firstItem="qzh-xl-tWN" firstAttribute="centerX" secondItem="Z2o-u2-bal" secondAttribute="centerX" id="XTx-1h-9ZQ"/>
+                            <constraint firstItem="zWO-by-Opc" firstAttribute="leading" secondItem="ks0-dG-znW" secondAttribute="leading" id="YDZ-ju-Edo"/>
+                            <constraint firstItem="zWO-by-Opc" firstAttribute="bottom" secondItem="ks0-dG-znW" secondAttribute="bottom" id="hwR-PV-LTL"/>
+                            <constraint firstItem="qzh-xl-tWN" firstAttribute="top" secondItem="ks0-dG-znW" secondAttribute="top" id="nVg-p5-MQO"/>
+                            <constraint firstItem="qzh-xl-tWN" firstAttribute="leading" secondItem="zWO-by-Opc" secondAttribute="leading" id="sUk-Vf-rBg"/>
+                            <constraint firstItem="zWO-by-Opc" firstAttribute="trailing" secondItem="ks0-dG-znW" secondAttribute="trailing" id="x93-di-its"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ks0-dG-znW"/>
+                    </view>
+                    <connections>
+                        <outlet property="arcteryxWebView" destination="zWO-by-Opc" id="yDF-Uu-qhR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sDd-vU-Fle" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508" y="-322.48875562218893"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="fzj-Wq-o5d">
+            <objects>
+                <viewController id="ymw-6h-E4V" customClass="AVTECHViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="87K-O3-xqe">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="5bj-hk-2pk">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="R2N-Fc-1An">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="AVTECH Gear" id="Fb9-Bm-ejj">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="qnC-sx-X4P">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="y0e-Fo-PI5"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="yYh-C6-aE6">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="cyM-1Z-Yr6"/>
+                                    <constraint firstAttribute="height" constant="603" id="hzS-Eh-2NL"/>
+                                    <constraint firstAttribute="width" secondItem="yYh-C6-aE6" secondAttribute="height" multiplier="125:201" id="paf-Tq-ysE"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="R2N-Fc-1An" firstAttribute="leading" secondItem="yYh-C6-aE6" secondAttribute="leading" id="9Ml-4U-jGS"/>
+                            <constraint firstItem="yYh-C6-aE6" firstAttribute="top" secondItem="R2N-Fc-1An" secondAttribute="bottom" id="FpF-nN-SAV"/>
+                            <constraint firstItem="5bj-hk-2pk" firstAttribute="leading" secondItem="87K-O3-xqe" secondAttribute="leadingMargin" constant="-25" id="Gp0-K8-pFT"/>
+                            <constraint firstItem="R2N-Fc-1An" firstAttribute="centerX" secondItem="5bj-hk-2pk" secondAttribute="centerX" id="JBK-qw-ljH"/>
+                            <constraint firstItem="yYh-C6-aE6" firstAttribute="trailing" secondItem="TEL-wT-RUm" secondAttribute="trailing" id="U6g-Br-2VG"/>
+                            <constraint firstItem="yYh-C6-aE6" firstAttribute="leading" secondItem="TEL-wT-RUm" secondAttribute="leading" id="ZQF-bE-ytH"/>
+                            <constraint firstItem="5bj-hk-2pk" firstAttribute="top" secondItem="87K-O3-xqe" secondAttribute="topMargin" constant="-32" id="cbf-MB-hIb"/>
+                            <constraint firstItem="R2N-Fc-1An" firstAttribute="trailing" secondItem="yYh-C6-aE6" secondAttribute="trailing" id="inz-kh-uB5"/>
+                            <constraint firstItem="5bj-hk-2pk" firstAttribute="centerY" secondItem="87K-O3-xqe" secondAttribute="centerY" id="nsH-Cy-lHY"/>
+                            <constraint firstItem="yYh-C6-aE6" firstAttribute="bottom" secondItem="TEL-wT-RUm" secondAttribute="bottom" id="q7k-fa-7E1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="TEL-wT-RUm"/>
+                    </view>
+                    <connections>
+                        <outlet property="avtechWebView" destination="yYh-C6-aE6" id="0ys-0v-Suq"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1O1-ai-FKa" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3244" y="-321.58920539730138"/>
+        </scene>
+        <!--Marmot View Controller-->
+        <scene sceneID="xSe-WV-0zo">
+            <objects>
+                <viewController id="50D-JX-pvq" customClass="MarmotViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iYU-xa-ElQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="KwS-TU-b6O">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kAF-aU-bzl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Marmot Gear" id="TR6-WZ-sse">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="JYy-kG-jhV">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="m1Y-i5-A1n"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1jN-1k-c1y">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="603" id="HjQ-E4-lUe"/>
+                                    <constraint firstAttribute="width" constant="375" id="hbw-8x-hti"/>
+                                    <constraint firstAttribute="width" secondItem="1jN-1k-c1y" secondAttribute="height" multiplier="125:201" id="zwU-kK-kj3"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="KwS-TU-b6O" firstAttribute="centerY" secondItem="iYU-xa-ElQ" secondAttribute="centerY" id="1aZ-Dn-wKr"/>
+                            <constraint firstItem="kAF-aU-bzl" firstAttribute="trailing" secondItem="1jN-1k-c1y" secondAttribute="trailing" id="6Si-aP-inU"/>
+                            <constraint firstItem="KwS-TU-b6O" firstAttribute="top" secondItem="iYU-xa-ElQ" secondAttribute="topMargin" constant="-32" id="CWp-wn-eME"/>
+                            <constraint firstItem="kAF-aU-bzl" firstAttribute="centerX" secondItem="KwS-TU-b6O" secondAttribute="centerX" id="PZn-h0-E21"/>
+                            <constraint firstItem="KwS-TU-b6O" firstAttribute="leading" secondItem="iYU-xa-ElQ" secondAttribute="leadingMargin" constant="-25" id="bTR-HY-unx"/>
+                            <constraint firstItem="1jN-1k-c1y" firstAttribute="bottom" secondItem="iop-0X-hgc" secondAttribute="bottom" id="gnJ-k0-qAM"/>
+                            <constraint firstItem="1jN-1k-c1y" firstAttribute="leading" secondItem="iop-0X-hgc" secondAttribute="leading" id="mip-t1-LyA"/>
+                            <constraint firstItem="1jN-1k-c1y" firstAttribute="top" secondItem="kAF-aU-bzl" secondAttribute="bottom" id="qfV-r7-WI7"/>
+                            <constraint firstItem="kAF-aU-bzl" firstAttribute="leading" secondItem="1jN-1k-c1y" secondAttribute="leading" id="slT-I6-CwH"/>
+                            <constraint firstItem="1jN-1k-c1y" firstAttribute="trailing" secondItem="iop-0X-hgc" secondAttribute="trailing" id="vht-hS-jDP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="iop-0X-hgc"/>
+                    </view>
+                    <connections>
+                        <outlet property="marmotWebView" destination="1jN-1k-c1y" id="uqp-c1-eQv"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="sss-VN-WcS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2905" y="-1003"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="v57-SO-72y">
+            <objects>
+                <viewController id="kLA-bY-Qim" customClass="REIViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NAU-2Q-Ypr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="MKl-L6-vCy">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EgB-g1-qkK">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="REI Outdoor Gear" id="Kcq-R7-aH1">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="chv-rO-CCR">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="c8A-id-hww"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="r9g-Oe-1fV">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="r9g-Oe-1fV" secondAttribute="height" multiplier="125:201" id="2Fg-Bw-JuX"/>
+                                    <constraint firstAttribute="width" constant="375" id="3NX-lV-N9k"/>
+                                    <constraint firstAttribute="height" constant="603" id="vGX-fV-Pyu"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="r9g-Oe-1fV" firstAttribute="top" secondItem="EgB-g1-qkK" secondAttribute="bottom" id="81e-0O-WK8"/>
+                            <constraint firstItem="r9g-Oe-1fV" firstAttribute="leading" secondItem="Fq5-vp-cLL" secondAttribute="leading" id="Pax-Cq-JId"/>
+                            <constraint firstItem="EgB-g1-qkK" firstAttribute="centerX" secondItem="MKl-L6-vCy" secondAttribute="centerX" id="SaI-2D-axy"/>
+                            <constraint firstItem="EgB-g1-qkK" firstAttribute="leading" secondItem="r9g-Oe-1fV" secondAttribute="leading" id="WR3-Wz-AJV"/>
+                            <constraint firstItem="EgB-g1-qkK" firstAttribute="trailing" secondItem="r9g-Oe-1fV" secondAttribute="trailing" id="Zil-7u-eS5"/>
+                            <constraint firstItem="MKl-L6-vCy" firstAttribute="centerY" secondItem="NAU-2Q-Ypr" secondAttribute="centerY" id="fwa-Po-PvT"/>
+                            <constraint firstItem="r9g-Oe-1fV" firstAttribute="trailing" secondItem="Fq5-vp-cLL" secondAttribute="trailing" id="nv7-kt-CC4"/>
+                            <constraint firstItem="MKl-L6-vCy" firstAttribute="top" secondItem="NAU-2Q-Ypr" secondAttribute="topMargin" constant="-32" id="q0d-lU-cjl"/>
+                            <constraint firstItem="EgB-g1-qkK" firstAttribute="top" secondItem="Fq5-vp-cLL" secondAttribute="top" id="vtO-5l-Em1"/>
+                            <constraint firstItem="r9g-Oe-1fV" firstAttribute="bottom" secondItem="Fq5-vp-cLL" secondAttribute="bottom" id="wKX-Qb-96n"/>
+                            <constraint firstItem="MKl-L6-vCy" firstAttribute="leading" secondItem="NAU-2Q-Ypr" secondAttribute="leadingMargin" constant="-25" id="yzo-4i-6Fp"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Fq5-vp-cLL"/>
+                    </view>
+                    <connections>
+                        <outlet property="reiWebView" destination="r9g-Oe-1fV" id="j5H-jK-xrt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="YV2-TY-Pt1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3636" y="-1003"/>
+        </scene>
+        <!--The North Face View Controller-->
+        <scene sceneID="FX0-Mj-d3u">
+            <objects>
+                <viewController id="DXU-jn-1SV" customClass="TheNorthFaceViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="i62-TZ-XkH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="E2Q-QZ-01N">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wNj-ev-Jgv">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="The North Face Gear" id="Xjb-lk-BwK">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="WRc-7o-cdX">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="SeV-4d-Laa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VEW-Kz-F9p">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="VEW-Kz-F9p" secondAttribute="height" multiplier="125:201" id="Zzg-Qw-wc0"/>
+                                    <constraint firstAttribute="width" constant="375" id="sNe-7r-Msm"/>
+                                    <constraint firstAttribute="height" constant="603" id="zPn-Xp-Buw"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="VEW-Kz-F9p" firstAttribute="bottom" secondItem="LVa-Gz-NPD" secondAttribute="bottom" id="DXa-y5-5qW"/>
+                            <constraint firstItem="E2Q-QZ-01N" firstAttribute="top" secondItem="i62-TZ-XkH" secondAttribute="topMargin" constant="-32" id="G18-mJ-cR8"/>
+                            <constraint firstItem="E2Q-QZ-01N" firstAttribute="centerY" secondItem="i62-TZ-XkH" secondAttribute="centerY" id="HUV-JY-Dvb"/>
+                            <constraint firstItem="wNj-ev-Jgv" firstAttribute="leading" secondItem="VEW-Kz-F9p" secondAttribute="leading" id="IdF-Na-VCq"/>
+                            <constraint firstItem="wNj-ev-Jgv" firstAttribute="top" secondItem="LVa-Gz-NPD" secondAttribute="top" id="J7R-BP-NaQ"/>
+                            <constraint firstItem="wNj-ev-Jgv" firstAttribute="trailing" secondItem="VEW-Kz-F9p" secondAttribute="trailing" id="Jtq-ds-LaR"/>
+                            <constraint firstItem="E2Q-QZ-01N" firstAttribute="leading" secondItem="i62-TZ-XkH" secondAttribute="leadingMargin" constant="-25" id="KPQ-Aw-6eN"/>
+                            <constraint firstItem="VEW-Kz-F9p" firstAttribute="trailing" secondItem="LVa-Gz-NPD" secondAttribute="trailing" id="Opd-pR-wZQ"/>
+                            <constraint firstItem="wNj-ev-Jgv" firstAttribute="centerX" secondItem="E2Q-QZ-01N" secondAttribute="centerX" id="SjL-0M-vAF"/>
+                            <constraint firstItem="VEW-Kz-F9p" firstAttribute="top" secondItem="wNj-ev-Jgv" secondAttribute="bottom" id="UAv-Kf-LTz"/>
+                            <constraint firstItem="VEW-Kz-F9p" firstAttribute="leading" secondItem="LVa-Gz-NPD" secondAttribute="leading" id="upR-PM-aoP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="LVa-Gz-NPD"/>
+                    </view>
+                    <connections>
+                        <outlet property="theNorthFaceWebView" destination="VEW-Kz-F9p" id="IXK-hY-nvk"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cvI-Lb-HRr" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4382" y="-1003"/>
+        </scene>
+        <!--Berghaus View Controller-->
+        <scene sceneID="krr-hw-Gj2">
+            <objects>
+                <viewController id="Tc0-gK-Sck" customClass="BerghausViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="r8F-Qi-NOB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="oxn-tR-qJ0">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KDR-kP-Qjy">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="KDR-kP-Qjy" secondAttribute="height" multiplier="125:201" id="7Pd-sv-Z5R"/>
+                                    <constraint firstAttribute="height" constant="603" id="Ovt-tu-gvp"/>
+                                    <constraint firstAttribute="width" constant="375" id="dYZ-Nz-O01"/>
+                                </constraints>
+                            </webView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NlA-iT-KeE">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Berghaus Gear" id="kU1-gd-I6o">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="psd-fU-dAk">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="sz9-oF-cYY"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="oxn-tR-qJ0" firstAttribute="top" secondItem="r8F-Qi-NOB" secondAttribute="topMargin" constant="-32" id="Ftc-C9-2yb"/>
+                            <constraint firstItem="KDR-kP-Qjy" firstAttribute="top" secondItem="NlA-iT-KeE" secondAttribute="bottom" id="KMb-lt-tNq"/>
+                            <constraint firstItem="NlA-iT-KeE" firstAttribute="trailing" secondItem="KDR-kP-Qjy" secondAttribute="trailing" id="NM2-mU-dsA"/>
+                            <constraint firstItem="NlA-iT-KeE" firstAttribute="leading" secondItem="KDR-kP-Qjy" secondAttribute="leading" id="Puu-Xp-iBO"/>
+                            <constraint firstItem="oxn-tR-qJ0" firstAttribute="leading" secondItem="r8F-Qi-NOB" secondAttribute="leadingMargin" constant="-25" id="WQC-uh-h7U"/>
+                            <constraint firstItem="oxn-tR-qJ0" firstAttribute="centerY" secondItem="r8F-Qi-NOB" secondAttribute="centerY" id="d09-Cf-yCU"/>
+                            <constraint firstItem="KDR-kP-Qjy" firstAttribute="leading" secondItem="pPE-GJ-hhI" secondAttribute="leading" id="d2E-qm-JuB"/>
+                            <constraint firstItem="NlA-iT-KeE" firstAttribute="centerX" secondItem="oxn-tR-qJ0" secondAttribute="centerX" id="h6N-Ec-2Ot"/>
+                            <constraint firstItem="KDR-kP-Qjy" firstAttribute="bottom" secondItem="pPE-GJ-hhI" secondAttribute="bottom" id="vdW-GM-2qn"/>
+                            <constraint firstItem="KDR-kP-Qjy" firstAttribute="trailing" secondItem="pPE-GJ-hhI" secondAttribute="trailing" id="zPq-7x-qmG"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="pPE-GJ-hhI"/>
+                    </view>
+                    <connections>
+                        <outlet property="berghausWebView" destination="KDR-kP-Qjy" id="rB7-4N-Jhz"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Itl-m7-ysc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3975.1999999999998" y="-322.48875562218893"/>
+        </scene>
+        <!--Deuter View Controller-->
+        <scene sceneID="yEB-OO-dHh">
+            <objects>
+                <viewController id="2Dd-bi-hEL" customClass="DeuterViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="lKa-VA-2tz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="drS-g1-05w">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XTh-pP-sfx">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Deuter Gear" id="iP2-27-yxG">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="EJw-uk-uC6">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="mGy-tR-AGe"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RxI-0v-UZa">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="375" id="W0h-5p-GsU"/>
+                                    <constraint firstAttribute="height" constant="603" id="a6Y-0N-4KO"/>
+                                    <constraint firstAttribute="width" secondItem="RxI-0v-UZa" secondAttribute="height" multiplier="125:201" id="myG-G8-LVn"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="XTh-pP-sfx" firstAttribute="trailing" secondItem="RxI-0v-UZa" secondAttribute="trailing" id="1OE-f1-b7z"/>
+                            <constraint firstItem="RxI-0v-UZa" firstAttribute="trailing" secondItem="YP5-GD-MFm" secondAttribute="trailing" id="4ep-ED-keb"/>
+                            <constraint firstItem="drS-g1-05w" firstAttribute="centerY" secondItem="lKa-VA-2tz" secondAttribute="centerY" id="C4U-FE-2kJ"/>
+                            <constraint firstItem="drS-g1-05w" firstAttribute="leading" secondItem="lKa-VA-2tz" secondAttribute="leadingMargin" constant="-25" id="IWW-eM-ytu"/>
+                            <constraint firstItem="drS-g1-05w" firstAttribute="top" secondItem="lKa-VA-2tz" secondAttribute="topMargin" constant="-32" id="M3z-nI-4eB"/>
+                            <constraint firstItem="XTh-pP-sfx" firstAttribute="centerX" secondItem="drS-g1-05w" secondAttribute="centerX" id="TgF-lQ-Gr3"/>
+                            <constraint firstItem="XTh-pP-sfx" firstAttribute="leading" secondItem="RxI-0v-UZa" secondAttribute="leading" id="UEb-L9-ehO"/>
+                            <constraint firstItem="RxI-0v-UZa" firstAttribute="top" secondItem="XTh-pP-sfx" secondAttribute="bottom" id="YJM-zb-1sM"/>
+                            <constraint firstItem="RxI-0v-UZa" firstAttribute="leading" secondItem="YP5-GD-MFm" secondAttribute="leading" id="oQp-zd-6t7"/>
+                            <constraint firstItem="RxI-0v-UZa" firstAttribute="bottom" secondItem="YP5-GD-MFm" secondAttribute="bottom" id="u7c-a7-hHt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="YP5-GD-MFm"/>
+                    </view>
+                    <connections>
+                        <outlet property="deuterWebView" destination="RxI-0v-UZa" id="2SC-lO-dN1"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="zAr-f7-Fd2" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4720.8000000000002" y="-321.58920539730138"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="wg7-f3-ORb">
+            <objects>
+                <viewController id="8rJ-Kc-sve" customClass="SecondViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QS5-Rx-YEW">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="jC7-R6-bqx">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="001-hiking" translatesAutoresizingMaskIntoConstraints="NO" id="CR1-3l-JeX">
+                                <rect key="frame" x="16" y="90" width="29" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Application" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OcZ-YV-ZuM">
+                                <rect key="frame" x="62" y="93" width="112" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="About Me" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iX1-Sk-XXr">
+                                <rect key="frame" x="131" y="313" width="112" height="18"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="Optima-Regular" family="Optima" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="002-backpack" translatesAutoresizingMaskIntoConstraints="NO" id="0ze-zi-xE6">
+                                <rect key="frame" x="90" y="310" width="30" height="25"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Klv-7s-FHe">
+                                <rect key="frame" x="43" y="123" width="245" height="157"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <string key="text">
+In this application there are several famous brands in outdoor gear and also this application takes data from the web brand it - each then this application also has a design that is suitable for something that smells of mountains or outdoor</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Profile" translatesAutoresizingMaskIntoConstraints="NO" id="cta-nQ-GAz">
+                                <rect key="frame" x="29" y="359" width="73" height="65"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nandhito Sam Pramudana" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cgX-gF-z3a">
+                                <rect key="frame" x="131" y="359" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="RPL 2" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Wc-Zb-n1K">
+                                <rect key="frame" x="131" y="388" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Jatiasih - Bekasi" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AHM-Yu-1JQ">
+                                <rect key="frame" x="131" y="417" width="179" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="GillSans" family="Gill Sans" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Information" id="RFy-BY-bsX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1088.8" y="359.37031484257875"/>
+        </scene>
+        <!--Eiger View Controller-->
+        <scene sceneID="vFP-Oj-iUH">
+            <objects>
+                <viewController id="LQO-hF-il6" customClass="EigerViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8Ur-Y9-ja3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="2vh-CI-QsU">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2DA-3k-lEe">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Eiger Gear" id="j7V-xD-j1h">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="cIw-VY-MqC">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="A0K-LZ-qmN"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="68T-Iu-VMB">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="603" id="GU0-c5-vid"/>
+                                    <constraint firstAttribute="width" secondItem="68T-Iu-VMB" secondAttribute="height" multiplier="125:201" id="XRx-xj-Y5q"/>
+                                    <constraint firstAttribute="width" constant="375" id="fBL-jS-Osh"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2vh-CI-QsU" firstAttribute="top" secondItem="8Ur-Y9-ja3" secondAttribute="topMargin" constant="-32" id="8ik-nP-anu"/>
+                            <constraint firstItem="2vh-CI-QsU" firstAttribute="leading" secondItem="8Ur-Y9-ja3" secondAttribute="leadingMargin" constant="-25" id="GWd-Tq-Yws"/>
+                            <constraint firstItem="2DA-3k-lEe" firstAttribute="centerX" secondItem="2vh-CI-QsU" secondAttribute="centerX" id="KUq-Vl-5Yf"/>
+                            <constraint firstItem="68T-Iu-VMB" firstAttribute="leading" secondItem="FTj-gw-uZQ" secondAttribute="leading" id="M6m-gy-gB1"/>
+                            <constraint firstItem="2DA-3k-lEe" firstAttribute="trailing" secondItem="68T-Iu-VMB" secondAttribute="trailing" id="R5L-TA-CTk"/>
+                            <constraint firstItem="2vh-CI-QsU" firstAttribute="centerY" secondItem="8Ur-Y9-ja3" secondAttribute="centerY" id="Rci-hc-TDp"/>
+                            <constraint firstItem="68T-Iu-VMB" firstAttribute="bottom" secondItem="FTj-gw-uZQ" secondAttribute="bottom" id="YKH-Xm-Xf8"/>
+                            <constraint firstItem="2DA-3k-lEe" firstAttribute="leading" secondItem="68T-Iu-VMB" secondAttribute="leading" id="Yir-h6-j9l"/>
+                            <constraint firstItem="68T-Iu-VMB" firstAttribute="trailing" secondItem="FTj-gw-uZQ" secondAttribute="trailing" id="r2A-du-h9d"/>
+                            <constraint firstItem="68T-Iu-VMB" firstAttribute="top" secondItem="2DA-3k-lEe" secondAttribute="bottom" id="uqr-7U-t9h"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FTj-gw-uZQ"/>
+                    </view>
+                    <connections>
+                        <outlet property="eigerWebView" destination="68T-Iu-VMB" id="kSn-vg-gnY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="918-gu-qKH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1791.2" y="358.4707646176912"/>
+        </scene>
+        <!--Gregory View Controller-->
+        <scene sceneID="5Yu-PP-YVX">
+            <objects>
+                <viewController id="BeG-G5-NMA" customClass="GregoryViewController" customModule="OutdoorGear" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="piR-T8-Akd">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MountBack60" translatesAutoresizingMaskIntoConstraints="NO" id="Yw1-ji-eL0">
+                                <rect key="frame" x="-9" y="-12" width="392" height="691"/>
+                            </imageView>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TcF-kD-uJw">
+                                <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                                <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <textAttributes key="titleTextAttributes">
+                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </textAttributes>
+                                <items>
+                                    <navigationItem title="Gregory Gear" id="ueq-xG-ZE7">
+                                        <barButtonItem key="leftBarButtonItem" title="Back" id="2Bm-OJ-5fX">
+                                            <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <connections>
+                                                <segue destination="49e-Tb-3d3" kind="modal" id="1hg-HM-UFa"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <webView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1C8-j8-tcY">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
+                                <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="603" id="NkY-VC-BLt"/>
+                                    <constraint firstAttribute="width" constant="375" id="PqH-6W-Mda"/>
+                                    <constraint firstAttribute="width" secondItem="1C8-j8-tcY" secondAttribute="height" multiplier="125:201" id="wtP-3G-KVn"/>
+                                </constraints>
+                            </webView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TcF-kD-uJw" firstAttribute="trailing" secondItem="1C8-j8-tcY" secondAttribute="trailing" id="1l1-Xy-ZSn"/>
+                            <constraint firstItem="1C8-j8-tcY" firstAttribute="bottom" secondItem="Sgx-HC-Wzc" secondAttribute="bottom" id="CNQ-UE-rJv"/>
+                            <constraint firstItem="TcF-kD-uJw" firstAttribute="leading" secondItem="1C8-j8-tcY" secondAttribute="leading" id="DTW-SX-dnp"/>
+                            <constraint firstItem="Yw1-ji-eL0" firstAttribute="centerY" secondItem="piR-T8-Akd" secondAttribute="centerY" id="HCm-vL-Liy"/>
+                            <constraint firstItem="TcF-kD-uJw" firstAttribute="centerX" secondItem="Yw1-ji-eL0" secondAttribute="centerX" id="IFe-1w-zUc"/>
+                            <constraint firstItem="1C8-j8-tcY" firstAttribute="leading" secondItem="Sgx-HC-Wzc" secondAttribute="leading" id="XZw-bD-eLK"/>
+                            <constraint firstItem="Yw1-ji-eL0" firstAttribute="top" secondItem="piR-T8-Akd" secondAttribute="topMargin" constant="-32" id="Yy8-Rj-B5t"/>
+                            <constraint firstItem="1C8-j8-tcY" firstAttribute="trailing" secondItem="Sgx-HC-Wzc" secondAttribute="trailing" id="c4s-tH-ShF"/>
+                            <constraint firstItem="Yw1-ji-eL0" firstAttribute="leading" secondItem="piR-T8-Akd" secondAttribute="leadingMargin" constant="-25" id="lUm-Mv-vSE"/>
+                            <constraint firstItem="1C8-j8-tcY" firstAttribute="top" secondItem="TcF-kD-uJw" secondAttribute="bottom" id="wKH-95-Ofv"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sgx-HC-Wzc"/>
+                    </view>
+                    <connections>
+                        <outlet property="gregoryWebView" destination="1C8-j8-tcY" id="HEY-qt-NfI"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cLh-kz-BUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508" y="358.4707646176912"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="yl2-sM-qoP">
+            <objects>
+                <tabBarController id="49e-Tb-3d3" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="W28-zg-YXA">
+                        <rect key="frame" x="0.0" y="975" width="768" height="49"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="custom" customColorSpace="sRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="mXb-Q8-7h8" kind="relationship" relationship="viewControllers" id="u7Y-xg-7CH"/>
+                        <segue destination="msE-GK-vDc" kind="relationship" relationship="viewControllers" id="lzU-1b-eKA"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HuB-VB-40B" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-559" y="4"/>
+        </scene>
+        <!--Outdoor Gear Menu-->
+        <scene sceneID="aWL-BW-fhr">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="mXb-Q8-7h8" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Outdoor Gear Menu" image="goal" landscapeImage="goal" selectedImage="goal" id="acW-dT-cKf"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="ol8-2F-Ndp">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="9pv-A4-QxB" kind="relationship" relationship="rootViewController" id="cYm-2p-810"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lxs-tz-a2e" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="335" y="-322"/>
+        </scene>
+        <!--Information-->
+        <scene sceneID="12t-8T-8YH">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="msE-GK-vDc" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Information" image="007-information" selectedImage="007-information" id="cPa-gy-q4n"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="aFe-Iq-hcu">
+                        <rect key="frame" x="0.0" y="20" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <textAttributes key="titleTextAttributes">
+                            <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="8rJ-Kc-sve" kind="relationship" relationship="rootViewController" id="SI3-YH-Zl4"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oOp-Ec-TFW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="334" y="359"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="001-hiking" width="32" height="32"/>
+        <image name="002-backpack" width="32" height="32"/>
+        <image name="007-information" width="32" height="32"/>
+        <image name="ARC'TERYX" width="395" height="449"/>
+        <image name="AVTECH" width="395" height="460"/>
+        <image name="Berghaus" width="395" height="493"/>
+        <image name="Deuter" width="397" height="451"/>
+        <image name="Eiger" width="415" height="439"/>
+        <image name="Gregory" width="415" height="466"/>
+        <image name="JackWolfskin" width="415" height="449"/>
+        <image name="Karrimor" width="417" height="467"/>
+        <image name="LoweAlpine" width="417" height="453"/>
+        <image name="Marmot" width="415" height="446"/>
+        <image name="MountBack60" width="430" height="768"/>
+        <image name="Profile" width="4000" height="4000"/>
+        <image name="REI" width="416" height="459"/>
+        <image name="TheNorthFace" width="418" height="461"/>
+        <image name="backpack" width="64" height="64"/>
+        <image name="goal" width="32" height="32"/>
+    </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="SeV-4d-Laa"/>
+    </inferredMetricsTieBreakers>
+</document>
